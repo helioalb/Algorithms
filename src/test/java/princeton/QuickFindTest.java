@@ -1,3 +1,5 @@
+package princeton;
+
 import org.junit.Test;
 import princeton.QuickFind;
 import princeton.UF;

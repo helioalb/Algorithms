@@ -1,8 +1,6 @@
 package princeton;
 
-public class QuickFind implements UF {
-    private int[] id;
-
+public class QuickFind extends UF {
     public QuickFind(int N) {
         id = new int[N];
         for (int i = 0; i < N; i++) {
@@ -21,19 +19,5 @@ public class QuickFind implements UF {
         for (int i = 0; i < id.length; i++) {
             if (id[i] == pid) id[i] = qid;
         }
-    }
-
-    @Override
-    public String toString() {
-        String str = "";
-        int last = this.id.length - 1;
-
-        for (int i = 0; i < last; i++) {
-            str += String.valueOf(this.id[i]) + " ";
-        }
-
-        str += String.valueOf(this.id[last]);
-
-        return str;
     }
 }
