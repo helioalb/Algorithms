@@ -2,10 +2,7 @@ package princeton;
 
 public class QuickFind extends UF {
     public QuickFind(int N) {
-        id = new int[N];
-        for (int i = 0; i < N; i++) {
-            id[i] = i;
-        }
+        super(N);
     }
 
     public boolean connected(int p, int q) {
