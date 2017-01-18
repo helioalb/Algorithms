@@ -1,6 +1,6 @@
-package princeton.datastructures;
+package datastructures;
 
-public class LinkedStackOfStrings {
+public class LinkedStackOfStrings implements Stack {
     private class Node {
         String item;
         Node next;

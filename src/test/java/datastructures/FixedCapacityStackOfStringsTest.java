@@ -4,10 +4,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class StackTest {
+public class FixedCapacityStackOfStringsTest {
     @Test
     public void isEmpty() throws Exception {
-        Stack stack = new Stack();
+        Stack stack = new FixedCapacityStackOfStrings(5);
 
         assertTrue(stack.isEmpty());
 
@@ -18,7 +18,7 @@ public class StackTest {
 
     @Test
     public void pushAndPop() throws Exception {
-        Stack stack = new Stack();
+        Stack stack = new FixedCapacityStackOfStrings(5);
         stack.push("first");
 
         assertEquals("first", stack.pop());
@@ -31,5 +31,5 @@ public class StackTest {
         assertEquals("second", stack.pop());
         assertEquals("first", stack.pop());
     }
-
 }
+
