@@ -1,4 +1,4 @@
-package datastructures;
+package datastructures.stack;
 
 public class ResizingArrayStackOfStrings implements Stack {
     private String[] s;

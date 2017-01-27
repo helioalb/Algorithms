@@ -1,13 +1,15 @@
-package datastructures;
+package datastructures.stack;
 
+import datastructures.stack.FixedCapacityStackOfStrings;
+import datastructures.stack.Stack;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class LinkedStackOfStringsTest {
+public class FixedCapacityStackOfStringsTest {
     @Test
     public void isEmpty() throws Exception {
-        Stack stack = new LinkedStackOfStrings();
+        Stack stack = new FixedCapacityStackOfStrings(5);
 
         assertTrue(stack.isEmpty());
 
@@ -18,7 +20,7 @@ public class LinkedStackOfStringsTest {
 
     @Test
     public void pushAndPop() throws Exception {
-        Stack stack = new LinkedStackOfStrings();
+        Stack stack = new FixedCapacityStackOfStrings(5);
         stack.push("first");
 
         assertEquals("first", stack.pop());
@@ -32,3 +34,4 @@ public class LinkedStackOfStringsTest {
         assertEquals("first", stack.pop());
     }
 }
+

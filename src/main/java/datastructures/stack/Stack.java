@@ -1,4 +1,4 @@
-package datastructures;
+package datastructures.stack;
 
 public interface Stack {
     boolean isEmpty();

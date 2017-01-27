@@ -1,5 +1,7 @@
-package datastructures;
+package datastructures.stack;
 
+import datastructures.stack.ResizingArrayStackOfStrings;
+import datastructures.stack.Stack;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

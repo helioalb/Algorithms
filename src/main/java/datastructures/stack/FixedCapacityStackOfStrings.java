@@ -1,4 +1,4 @@
-package datastructures;
+package datastructures.stack;
 
 public class FixedCapacityStackOfStrings implements Stack {
     private int N = 0;
