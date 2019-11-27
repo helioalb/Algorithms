@@ -13,3 +13,5 @@ Portuguese:
 ## Problem
 
 Sources and sinks. Calculate an array of boolean _isSink[]_, indexed by vertex that indentify the _sinks_ of a graph. Repeat wiht _sources_ insted _sinks_.
+
+![graph](graph.svg)
