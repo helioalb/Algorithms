@@ -10,21 +10,21 @@ class LinkedList:
         self.h = None
 
     def insert_node_to_tail(self, node):
-        if self.h is None:
-            self.h = node
-        else:
+        if self.h:
             current = self.h
 
-            while current.next is not None:
+            while current.next:
                 current = current.next
 
             current.next = node
+        else:
+            self.h = node
 
     def insert_node_to_head(self, node):
-        if self.h is None:
+        if self.h:
+            node.next = self.h
             self.h = node
         else:
-            node.next = self.h
             self.h = node
 
     def is_empty(self):
@@ -34,13 +34,12 @@ class LinkedList:
         return self.h
 
     def tail(self):
-        if self.h is not None:
-            current = self.h
+        current = self.h
 
-            while current.next is not None:
-                current = current.next
+        while current.next:
+            current = current.next
 
-            return current
+        return current
 
 import unittest
 
