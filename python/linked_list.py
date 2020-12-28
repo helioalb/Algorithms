@@ -7,34 +7,34 @@ class Node:
 
 class LinkedList:
     def __init__(self):
-        self.h = None
+        self._head = None
 
     def insert_node_to_tail(self, node):
-        if self.h:
-            current = self.h
+        if self._head:
+            current = self._head
 
             while current.next:
                 current = current.next
 
             current.next = node
         else:
-            self.h = node
+            self._head = node
 
     def insert_node_to_head(self, node):
-        if self.h:
-            node.next = self.h
-            self.h = node
+        if self._head:
+            node.next = self._head
+            self._head = node
         else:
-            self.h = node
+            self._head = node
 
     def is_empty(self):
-        return self.h is None
+        return self._head is None
 
     def head(self):
-        return self.h
+        return self._head
 
     def tail(self):
-        current = self.h
+        current = self._head
 
         while current.next:
             current = current.next
