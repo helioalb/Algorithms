@@ -4,7 +4,7 @@ function twoSum(numbers, target) {
     let left = 0;
     let right = numbers.length - 1;
 
-    do {
+    while (left < right) {
         const firstNumber = numbers[left];
         const secondNumber = numbers[right];
         const sum = firstNumber + secondNumber;
@@ -12,8 +12,7 @@ function twoSum(numbers, target) {
 
         if (sum > target) right--;
         if (sum < target) left++;
-    } while (left < right);
-
+    }
     return [];
 }
 
