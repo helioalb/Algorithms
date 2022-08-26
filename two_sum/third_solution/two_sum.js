@@ -13,6 +13,7 @@ function twoSum(numbers, target) {
         if (sum > target) right--;
         if (sum < target) left++;
     }
+
     return [];
 }
 
