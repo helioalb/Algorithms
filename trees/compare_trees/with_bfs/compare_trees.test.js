@@ -1,4 +1,4 @@
-const compare_trees = require('./compare_trees');
+const areEquals = require('./compare_trees');
 
 test ('compare two equal trees', () => {
     //        4                 4
@@ -9,7 +9,7 @@ test ('compare two equal trees', () => {
     const firstTree = buildBalancedTree();
     const secondTree = buildBalancedTree();
 
-    expect(compare_trees(firstTree, secondTree)).toBeTruthy();
+    expect(areEquals(firstTree, secondTree)).toBeTruthy();
 });
 
 test ('compare different trees', () => {
@@ -21,7 +21,7 @@ test ('compare different trees', () => {
     const firstTree = buildBalancedTree();
     const secondTree = buildSmallTree();
 
-    expect(compare_trees(firstTree, secondTree)).toBeFalsy();
+    expect(areEquals(firstTree, secondTree)).toBeFalsy();
 });
 
 function buildBalancedTree() {
