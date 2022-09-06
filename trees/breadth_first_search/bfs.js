@@ -1,14 +1,14 @@
 function bfs(tree, element) {
-    if (tree === null) return false;
+    if (tree == null) return false;
 
     const queue = [tree];
 
-    while(queue.length > 0) {
-        const current = queue.shift();
-        if (current.value === element) return true;
+    while (queue.length > 0) {
+        const node = queue.shift();
+        if (node.value === element) return true;
 
-        if (current.left) queue.push(current.left);
-        if (current.right) queue.push(current.right);
+        if (node.left !== null) queue.push(node.left);
+        if (node.right !== null) queue.push(node.right);
     }
     return false;
 }
