@@ -6,3 +6,5 @@ def two_sum(numbers: list, target: int) -> list:
             if numbers[i] + numbers[j] == target:
                 return [numbers[i], numbers[j]]
     return []
+
+# This algorithm is O(n**2)
